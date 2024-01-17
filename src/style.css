@@ -13,7 +13,7 @@
   text-align: center;
   line-height: 150px;
   align-items: center;
-
+  padding: 20px;
   border-radius: 10px;
 }
 .valor {
@@ -24,15 +24,10 @@
 .primero {
   display: flex;
   justify-content: flex-start;
-  padding-left: 20px;
-  padding: 10px;
 }
 .segundo {
   display: flex;
   justify-content: flex-end;
-  padding-right: 20px;
-  padding: 10px;
-  padding-bottom: 10px;
 }
 
 .heart::before {
