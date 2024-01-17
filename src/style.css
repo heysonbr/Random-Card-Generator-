@@ -1,1 +1,91 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+.tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+  margin: 10px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 150px;
+  align-items: center;
+
+  border-radius: 10px;
+}
+.valor {
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+}
+.primero {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.segundo {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.heart::before {
+  content: "♥";
+  color: red;
+  font-size: 150px;
+}
+
+.diamond::before {
+  content: "♦";
+  color: red;
+  font-size: 150px;
+}
+
+.club::before {
+  content: "♣";
+  font-size: 150px;
+}
+
+.spade::before {
+  content: "♠";
+  font-size: 150px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 4px solid #000;
+  width: 100px;
+  height: 40px;
+}
+.button:hover {
+  background-color: #000;
+  color: aliceblue;
+}
+.button:active {
+  background-color: #ff0000;
+  color: aliceblue;
+}
+#contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin: 10px;
+}
+input {
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+  border: 4px solid #000;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}

@@ -1,11 +1,82 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+// Función para generar un número aleatorio en un rango específico
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+// Función para seleccionar aleatoriamente un elemento de un array
+function getRandomElement(array) {
+  return array[getRandomNumber(0, array.length - 1)];
+}
+
+// Función para actualizar la carta aleatoriamente
+function updateCard() {
+  const suits = ["heart", "diamond", "club", "spade"];
+  const values = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+    "A",
+  ];
+
+  const randomSuit = getRandomElement(suits);
+  const randomValue = getRandomElement(values);
+
+  const valor = document.querySelector(".valor");
+  const forma = document.querySelector("#forma");
+  const forma2 = document.querySelector("#forma2");
+
+  forma.className = randomSuit;
+
+  forma2.className = randomSuit;
+
+  valor.innerHTML = randomValue;
+  // Llamada a la función updateCard cuando se hace click en el botón
+  const button = document.querySelector("#button");
+  button.addEventListener("click", updateCard);
+  const card = document.getElementById("randomCard");
+  const widthInput = document.getElementById("widthInput").value;
+  const heightInput = document.getElementById("heightInput").value;
+  card.style.width = widthInput ? `${widthInput}px` : "400px";
+  card.style.height = heightInput ? `${heightInput}px` : "500px";
+}
+
+window.onload = () => {
+  let contador = 10;
+  const contadorElemento = document.querySelector("#contador");
+
+  // Función para actualizar el contador
+  function actualizarContador() {
+    contadorElemento.innerHTML = contador;
+    contador--;
+    if (contador < 0) {
+      contador = 10;
+    }
+  }
+
+  // Función para actualizar la carta y reiniciar el contador
+  function updateCardAndResetCounter() {
+    updateCard();
+    contador = 10;
+  }
+
+  // Llamada inicial para mostrar una carta al cargar la página
+  updateCardAndResetCounter();
+  setInterval(actualizarContador, 1000); // Actualiza el contador cada segundo
+
+  setInterval(updateCardAndResetCounter, 11000); // Genera una nueva carta y reinicia el contador cada 10 segundos
+
+  // Llamada a la función updateCardAndResetCounter cuando se hace click en el botón
+  const button = document.querySelector("#button");
+  button.addEventListener("click", updateCardAndResetCounter);
 };
