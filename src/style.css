@@ -25,33 +25,39 @@
   display: flex;
   justify-content: flex-start;
   padding-left: 20px;
+  padding: 10px;
 }
 .segundo {
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
+  padding: 10px;
 }
 
 .heart::before {
   content: "♥";
   color: red;
   font-size: 150px;
+  padding: 10px;
 }
 
 .diamond::before {
   content: "♦";
   color: red;
   font-size: 150px;
+  padding: 10px;
 }
 
 .club::before {
   content: "♣";
   font-size: 150px;
+  padding: 10px;
 }
 
 .spade::before {
   content: "♠";
   font-size: 150px;
+  padding: 10px;
 }
 
 .button {

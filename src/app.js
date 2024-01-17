@@ -49,6 +49,17 @@ function updateCard() {
   const heightInput = document.getElementById("heightInput").value;
   card.style.width = widthInput ? `${widthInput}px` : "400px";
   card.style.height = heightInput ? `${heightInput}px` : "500px";
+  valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
+
+  //const heart = document.querySelector(".heart");
+  //const diamond = document.querySelector(".diamond");
+  //const club = document.querySelector(".club");
+  //const spade = document.querySelector(".spade");
+
+  // heart.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
+  //diamond.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
+  // club.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
+  // spade.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
 }
 
 window.onload = () => {
