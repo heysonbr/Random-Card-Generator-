@@ -69,27 +69,29 @@ function updateCard() {
   //diamond.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
   // club.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
   // spade.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
-}
+  function changeCardSize2() {
+    card.style.width = "200px";
+    card.style.height = "300px";
+  }
 
-function changeCardSize2() {
+  function changeCardSize3() {
+    card.style.width = "400px";
+    card.style.height = "500px";
+  }
+
+  function changeCardSize4() {
+    card.style.width = "800px";
+    card.style.height = "1000px";
+  }
+
   const button2 = document.querySelector("#button2");
-  card.style.width = "200px";
-  card.style.height = "300px";
   button2.addEventListener("click", changeCardSize2);
-}
 
-function changeCardSize3() {
   const button3 = document.querySelector("#button3");
-  card.style.width = "200px";
-  card.style.height = "300px";
   button3.addEventListener("click", changeCardSize3);
-}
 
-function changeCardSize4() {
   const button4 = document.querySelector("#button4");
-  card.style.width = "200px";
-  card.style.height = "300px";
-  button4.addEventListener("click", changeCardSize3);
+  button4.addEventListener("click", changeCardSize4);
 }
 
 window.onload = () => {

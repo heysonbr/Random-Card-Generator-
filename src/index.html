@@ -41,14 +41,14 @@
   </div>
   <div class="tarjeta">
     <label for="widthInput"></label>
-    <input type="text" id="widthInput" placeholder="Escribe el ancho" />
+    <input type="text" id="widthInput" placeholder="Escribe el ancho" maxlength="3" />
   </div>
   <div class="tarjeta">
     <label for="heightInput"></label>
-    <input type="text" id="heightInput" placeholder="Escribe la altura" />
+    <input type="text" id="heightInput" placeholder="Escribe la altura" maxlength="3" />
   </div>
   <div class="tarjeta tarjetas">
-    <button id="button2" class="cartas">
+    <button id="button2" class="cartas" onclick="changeCardSize2()">
       width: 200px
       height: 300px
     </button>
