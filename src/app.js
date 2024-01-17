@@ -75,21 +75,21 @@ function changeCardSize2() {
   const button2 = document.querySelector("#button2");
   card.style.width = "200px";
   card.style.height = "300px";
-  button2.addEventListener("click", peque);
+  button2.addEventListener("click", changeCardSize2);
 }
 
 function changeCardSize3() {
   const button3 = document.querySelector("#button3");
   card.style.width = "200px";
   card.style.height = "300px";
-  button3.addEventListener("click", peque);
+  button3.addEventListener("click", changeCardSize3);
 }
 
 function changeCardSize4() {
   const button4 = document.querySelector("#button4");
   card.style.width = "200px";
   card.style.height = "300px";
-  button4.addEventListener("click", peque);
+  button4.addEventListener("click", changeCardSize3);
 }
 
 window.onload = () => {
