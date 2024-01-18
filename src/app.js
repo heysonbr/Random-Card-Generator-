@@ -60,11 +60,11 @@ function input() {
   valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "100px";
   button.addEventListener("click", updateCard);
 }
-const widthInput = document.getElementById("widthInput").value;
+
 function input2() {
   const forma = document.querySelector("#forma");
   const forma2 = document.querySelector("#forma2");
-
+  const widthInput = document.getElementById("widthInput").value;
   let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
 
   forma.style.setProperty("--tamanio-after", nuevoTamanio);
@@ -75,6 +75,94 @@ function input2() {
 document.addEventListener("DOMContentLoaded", () => {
   input2();
 });
+
+function heart() {
+  // Obtén el valor del input dentro de la función
+  const widthInput = document.getElementById("widthInput").value;
+
+  let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
+
+  // Crea una nueva regla de estilo
+  let style = document.createElement("style");
+  style.innerHTML = `
+    .heart::before {
+      font-size: ${nuevoTamanio} !important;
+    }
+  `;
+
+  // Agrega la regla de estilo al documento
+  document.head.appendChild(style);
+
+  button.addEventListener("click", updateCard);
+}
+
+document.getElementById("widthInput").addEventListener("change", heart);
+
+function diamond() {
+  // Obtén el valor del input dentro de la función
+  const widthInput = document.getElementById("widthInput").value;
+
+  let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
+
+  // Crea una nueva regla de estilo
+  let style = document.createElement("style");
+  style.innerHTML = `
+    .diamond::before {
+      font-size: ${nuevoTamanio} !important;
+    }
+  `;
+
+  // Agrega la regla de estilo al documento
+  document.head.appendChild(style);
+
+  button.addEventListener("click", updateCard);
+}
+
+document.getElementById("widthInput").addEventListener("change", diamond);
+
+function club() {
+  // Obtén el valor del input dentro de la función
+  const widthInput = document.getElementById("widthInput").value;
+
+  let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
+
+  // Crea una nueva regla de estilo
+  let style = document.createElement("style");
+  style.innerHTML = `
+    .club::before {
+      font-size: ${nuevoTamanio} !important;
+    }
+  `;
+
+  // Agrega la regla de estilo al documento
+  document.head.appendChild(style);
+
+  button.addEventListener("click", updateCard);
+}
+
+document.getElementById("widthInput").addEventListener("change", club);
+
+function spade() {
+  // Obtén el valor del input dentro de la función
+  const widthInput = document.getElementById("widthInput").value;
+
+  let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
+
+  // Crea una nueva regla de estilo
+  let style = document.createElement("style");
+  style.innerHTML = `
+    .spade::before {
+      font-size: ${nuevoTamanio} !important;
+    }
+  `;
+
+  // Agrega la regla de estilo al documento
+  document.head.appendChild(style);
+
+  button.addEventListener("click", updateCard);
+}
+
+document.getElementById("widthInput").addEventListener("change", spade);
 
 function botones() {
   const buttonSmall = document.querySelector("#buttonSmall");
