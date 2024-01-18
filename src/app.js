@@ -1,5 +1,5 @@
 /* eslint-disable */
-
+import "./style.css";
 // Función para generar un número aleatorio en un rango específico
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,23 +23,11 @@ const values = [
   "J",
   "Q",
   "K",
-  "A",
+  "A"
 ];
+
 // Función para obtener el símbolo del traje
-function getSuitSymbol(suit) {
-  switch (suit) {
-    case "heart":
-      return "♥";
-    case "diamond":
-      return "♦";
-    case "club":
-      return "♣";
-    case "spade":
-      return "♠";
-    default:
-      return "";
-  }
-}
+
 const button = document.querySelector("#button");
 // Función para actualizar la carta aleatoriamente
 function updateCard() {
@@ -69,7 +57,7 @@ function input() {
 
   card.style.width = widthInput ? `${widthInput}px` : "400px";
   card.style.height = heightInput ? `${heightInput}px` : "500px";
-  valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "150px";
+  valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "100px";
   button.addEventListener("click", updateCard);
 }
 
