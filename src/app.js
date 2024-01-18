@@ -60,8 +60,22 @@ function input() {
   valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "100px";
   button.addEventListener("click", updateCard);
 }
+const widthInput = document.getElementById("widthInput").value;
+function input2() {
+  const forma = document.querySelector("#forma");
+  const forma2 = document.querySelector("#forma2");
 
-function input2() {}
+  let nuevoTamanio = widthInput ? `${widthInput / 3}px` : "120px";
+
+  forma.style.setProperty("--tamanio-after", nuevoTamanio);
+  forma2.style.setProperty("--tamanio-after", nuevoTamanio);
+  button.addEventListener("click", updateCard);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  input2();
+});
+
 function botones() {
   const buttonSmall = document.querySelector("#buttonSmall");
   const buttonMedium = document.querySelector("#buttonMedium");

@@ -33,26 +33,26 @@
 .heart::before {
   content: "♥";
   color: red;
-  font-size: 120px;
+  font-size: var(--tamanio-after);
   padding: 10px;
 }
 
 .diamond::before {
   content: "♦";
   color: red;
-  font-size: 120px;
+  font-size: var(--tamanio-after);
   padding: 10px;
 }
 
 .club::before {
   content: "♣";
-  font-size: 120px;
+  font-size: var(--tamanio-after);
   padding: 10px;
 }
 
 .spade::before {
   content: "♠";
-  font-size: 120px;
+  font-size: var(--tamanio-after);
   padding: 10px;
 }
 
