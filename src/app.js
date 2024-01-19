@@ -57,6 +57,7 @@ function input() {
 
   card.style.width = widthInput ? `${widthInput}px` : "400px";
   card.style.height = heightInput ? `${heightInput}px` : "500px";
+  // card.style.height = widthInput ? `${widthInput * 1.6}px` : "500px";
   valor.style.fontSize = widthInput ? `${widthInput / 3}px` : "100px";
   button.addEventListener("click", updateCard);
 }
@@ -170,19 +171,65 @@ function botones() {
   const buttonLarge = document.querySelector("#buttonLarge");
   const card = document.getElementById("randomCard");
 
+  const valor = document.querySelector(".valor");
+
   buttonSmall.addEventListener("click", () => {
     card.style.width = "200px";
     card.style.height = "300px";
+    valor.style.fontSize = "66.6px";
+
+    let style = document.createElement("style");
+    style.innerHTML = `
+    .club::before,
+    .diamond::before,
+    .spade::before,
+    .heart::before {
+      font-size: 66.6px !important;
+    }
+  `;
+
+    // Agrega la regla de estilo al documento
+    document.head.appendChild(style);
+
+    button.addEventListener("click", updateCard);
   });
 
   buttonMedium.addEventListener("click", () => {
     card.style.width = "400px";
     card.style.height = "500px";
+    valor.style.fontSize = "100px";
+
+    let style = document.createElement("style");
+    style.innerHTML = `
+    .club::before,
+    .diamond::before,
+    .spade::before,
+    .heart::before {
+      font-size: 100px !important;
+    }
+  `;
+
+    // Agrega la regla de estilo al documento
+    document.head.appendChild(style);
   });
 
   buttonLarge.addEventListener("click", () => {
-    card.style.width = "700px";
-    card.style.height = "800px";
+    card.style.width = "800px";
+    card.style.height = "900px";
+    valor.style.fontSize = "200px";
+
+    let style = document.createElement("style");
+    style.innerHTML = `
+    .club::before,
+    .diamond::before,
+    .spade::before,
+    .heart::before {
+      font-size: 200px !important;
+    }
+  `;
+
+    // Agrega la regla de estilo al documento
+    document.head.appendChild(style);
   });
 }
 
