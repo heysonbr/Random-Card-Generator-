@@ -237,10 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
   botones();
 });
 
-/**
- * Handles the input and updates the card size accordingly.
- */
-
 window.onload = () => {
   let contador = 10;
   const contadorElemento = document.querySelector("#contador");
